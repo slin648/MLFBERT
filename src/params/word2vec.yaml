@@ -1,0 +1,19 @@
+note: 'Word2Vec MIND DEMO'
+
+data_params:
+  mind_path: ../MIND_DATASET
+  batch_size: 16
+  seed: 1
+
+module_params:
+  lr: 1e-4
+  weight_decay: 0.
+  base_model: Word2VecNRMS
+  wordembedding_path: ./wordembedding.npy
+
+trainer_params:
+  weights_save_path: ../checkpoints
+  epochs: 20
+  precision: 32
+  gpus: -1
+  accumulate_grad_batches: 1

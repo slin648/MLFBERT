@@ -1,0 +1,19 @@
+note: 'BERT MIND DEMO'
+
+data_params:
+  mind_path: ../MIND_DATASET
+  batch_size: 8
+  seed: 1
+
+module_params:
+  lr: 1e-5
+  weight_decay: 0.
+  base_model: MLFBERT
+  wordembedding_path: ./wordembedding.npy
+
+trainer_params:
+  weights_save_path: ../checkpoints
+  epochs: 5
+  precision: 16
+  gpus: -1
+  accumulate_grad_batches: 1

@@ -66,7 +66,7 @@ MIND_DATASET
 ```
 Only behaviors.tsv and news.tsv are required for training and evaluation.
 
-glove.840B.300d.txt is used for Word2vec model.
+glove.840B.300d.txt is used for Word2vec models (like NRMS).
 
 for the preporcessing, run the following command:
 ```bash
@@ -95,7 +95,7 @@ python src\005.make-submission.py
 ## Model
 
 4 models are implemented in this project:
-- NRMS
+- NRMS (Word2VecNRMS)
 - PLM-NR
 - Fusion-NR
 - MLFBERT

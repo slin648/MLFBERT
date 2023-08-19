@@ -683,7 +683,7 @@ class MLFBERT(nn.Module):
         return loss, logits
 
 
-class NRMS(nn.Module):
+class Word2VecNRMS(nn.Module):
     """
     Word2Vec version NRMS
     """
@@ -692,7 +692,7 @@ class NRMS(nn.Module):
         self,
         wordembedding_path: str,
     ):
-        super(NRMS, self).__init__()
+        super(Word2VecNRMS, self).__init__()
         self.encoder = WordEmbeddingNewsEncoder(wordembedding_path)
 
         dim = self.encoder.dim

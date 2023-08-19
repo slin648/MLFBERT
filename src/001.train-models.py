@@ -41,7 +41,7 @@ from mind.main.data_module import MINDDataModule
 from mind.main.dataset import MINDDatasetVal
 from mind.params import ModuleParams, Params
 from models.expmodels import (
-    NRMS,
+    Word2VecNRMS,
     PLMNR,
     FusionNR,
     MLFBERT,
@@ -78,8 +78,8 @@ class PLModule(pl.LightningModule):
                 pretrained_model_name=self.hp.pretrained_model_name,
                 sa_pretrained_model_name=self.hp.sa_pretrained_model_name,
             )
-        elif self.hparams["base_model"] == "NRMS":
-            self.model = NRMS(
+        elif self.hparams["base_model"] == "Word2VecNRMS":
+            self.model = Word2VecNRMS(
                 wordembedding_path=self.hp.wordembedding_path,
             )
         else:

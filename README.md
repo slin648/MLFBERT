@@ -1,7 +1,5 @@
 # MLFBERT
-
-MLFBERT: Advancing News Recommendation 
-with Multi-Layer Fusion over BERT
+## Advancing News Recommendation with Multi-Layer Fusion over BERT
 
 My COMPSCI 791 project at the University of Auckland.
 
